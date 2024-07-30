@@ -31,6 +31,7 @@ export class AccountService {
           this.currentUser.set(user);
           console.log(this.currentUser)
         }
+        return user;
       })
     )
   }
