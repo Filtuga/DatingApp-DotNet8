@@ -7,8 +7,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
 
-        @if (accountService.currentUser()) {
+        
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              @if (accountService.currentUser()) {
                 <li class="nav-item">
                   <a class="nav-link" routerLink="/members" routerLinkActive="active">Matches</a>
                 </li>
@@ -18,11 +19,13 @@
                 <li class="nav-item">
                   <a class="nav-link" routerLink="/messages" routerLinkActive="active">Messages</a>
                 </li>
-              </ul>
-            }
+              }
+            </ul>
+            
         @if (accountService.currentUser()){
           <div dropdown class="dropdown">
-            <a dropdownToggle class="dropdown-toggle text-light text-decoration-none">Welcome User</a>
+            <a dropdownToggle class="dropdown-toggle text-light text-decoration-none">
+              Welcome {{accountService.currentUser()?.username | titlecase}}</a>
             <div *bsDropdownMenu class="dropdown-menu">
                 <a class="dropdown-item">Edit Profile</a>
                 <div class="dropdown-divider"></div>
@@ -36,7 +39,7 @@
             <form class="d-flex ms-5" #loginForm="ngForm" (submit)="login()" autocomplete="off">
                 <input name="username" [(ngModel)]="model.username" class="form-control me-2" type="text" placeholder="Username">
                 <input name="password" [(ngModel)]="model.password" class="form-control me-2" type="password" placeholder="Password">
-                <button class="btn btn-outline-success" type="submit">Login</button>
+                <button class="btn btn-danger" type="submit">Login</button>
             </form>
         }
         

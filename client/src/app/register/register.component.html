@@ -1,6 +1,6 @@
 
 <form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off">
-    <h2 class="text-center text-primary">Sign up</h2>
+    <h2 class="text-center">Sign up</h2>
     <hr>
     <div class="mb-3 form-floating">
         <input type="text"
@@ -24,7 +24,7 @@
     </div>
 
     <div class="form-group m-2">
-        <button type="submit" class="btn btn-success me-2">Register</button>
-        <button (click)="cancel()" class="btn btn-warning">Cancel</button>        
+        <button type="submit" class="btn btn-dark me-2">Register</button>
+        <button (click)="cancel()" class="btn btn-light">Cancel</button>        
     </div>
 </form>

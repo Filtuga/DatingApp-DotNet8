@@ -5,8 +5,8 @@
             <h1>Find your match</h1>
             <p class="lead">Come on in to view your matches... all you need to do is sign up!</p>
             <div class="text-center">
-                <button (click)="registerToggle()" class="btn btn-primary btn-lg me-2">Register</button>
-                <button class="btn btn-info btn-lg me-2">Learn More</button>
+                <button (click)="registerToggle()" class="btn btn-dark btn-lg me-2">Register</button>
+                <button class="btn btn-light btn-lg me-2">Learn More</button>
             </div>
         } @else {
             <div class="container">
@@ -16,7 +16,6 @@
                         (cancelRegister)="cancelRegisterMode($event)">
 
                         </app-register>
-                        <button (click)="registerToggle()" class="btn btn-primary btn-sm">go back</button>
                     </div>
                 </div>
             </div>
